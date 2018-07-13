@@ -1,0 +1,17 @@
+package co.samples;
+import java.util.List;
+
+import javax.sql.DataSource;
+public interface StudentDAO {
+//user defined interface
+	
+	
+	/** This is the method to be used to intialize * database resource connection.
+	 */
+	
+	public void setDataSource(DataSource ds); //abstract method
+	
+	/** This is the metod to be used to create a record in the student table */
+	
+	public 
+}

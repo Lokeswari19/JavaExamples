@@ -1,0 +1,9 @@
+package co.edureka;
+
+public class MyMaths {
+	
+	//Method with Some Business Logic
+	public void squareOfNum(int num){
+		System.out.println("Square of "+ num+  " is :" +(num*num));
+	}
+}

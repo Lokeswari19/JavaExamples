@@ -1,0 +1,11 @@
+package co.samples;
+//Model Class or Bean or POJO
+
+public class Student {
+//Attributes
+	
+	private Integer id;
+	private String name;
+	private Integer age;
+
+}

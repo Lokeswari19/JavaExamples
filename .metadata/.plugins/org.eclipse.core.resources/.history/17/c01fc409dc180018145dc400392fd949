@@ -1,0 +1,7 @@
+package co.edureka;
+
+public class Person {
+	String name;
+	String phone;
+	Address adrs;
+}

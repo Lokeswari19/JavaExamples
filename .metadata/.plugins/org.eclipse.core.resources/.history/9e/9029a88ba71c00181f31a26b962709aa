@@ -1,0 +1,10 @@
+package co.samples;
+import java.util.List;
+public interface StudentDAO {
+//user defined interface
+	
+	
+	/* This is the method to be used to intialize
+	 *  
+	 */
+}

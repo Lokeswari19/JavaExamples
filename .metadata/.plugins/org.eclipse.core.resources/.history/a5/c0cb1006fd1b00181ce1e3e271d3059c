@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 
+	   http://www.springframework.org/schema/context 
+	   http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	   <bean id="emp1" class="co.edureka.Employee" init-method="myInit" destroy-method="myDestroy">
+	   	<property name ="id" value="102"/>
+	   <property name ="name" value="Jennie"/>
+	   <property name ="salary" value="20000"/>
+	   <property name ="email" value="jennie@example.com"/>
+	   <property name ="address" value="shadowood shores"/>
+	   </bean>
+	   <bean id="emp2" class="co.edureka.Employee" >
+	   <property name ="id" value="103"/>
+	   <property name ="name" value="Ben"/>
+	   <property name ="salary" value="25000"/>
+	   <property name ="email" value="Ben@example.com"/>
+	   <property name ="address" value="Southern shores"/>
+	   </bean>
+	   <bean class="co.edureka.PostProcessor"/>   
+	   <bean id="father" class="co.edureka.Father">
+	   	<property name ="fname" value="John"/>
+	   <property name ="lname" value="Watson"/>
+	   <property name ="address" value="shadowood shores"/>
+	   </bean>
+	   
+	   <bean id="child" class="co.edureka.Child" parent="father">
+	   	<property name ="fname" value="Ben"/>
+	   <property name ="phone" value="777777777"/>
+	   </bean>
+	   
+	    <bean id="address" class="co.edureka.Address">
+	   	<property name ="city" value="atlanta"/>
+	   <property name ="state" value="Georgia"/>
+	   <property name ="zipcode" value="30330"/>
+	   </bean>
+	   
+	   <bean id="person" class="co.edureka.Person" >
+	   	<property name ="name" value="John Watson"/>
+	   <property name ="phone" value="777777777"/>
+	 	<!--  <constructor-arg ref="address"/>   Constructor Injection -->
+	 	<property name="adrs" ref="address"/>  <!--  Setter based -->
+	   <property name="certificates">	<!--  Collection Injection -->
+	   		<list>
+	   			<value>AWS</value>
+	   			<value>OCJP</value>
+	   			<value>CCNA</value>
+	   			
+	   		</list>
+	   </property>
+	   </bean> 
+	   
+	   <context:annotation-config/>
+	   <bean id="ca" class="co.edureka.CA"/>
+	   <bean id="cb" class="co.edureka.CB"/>
+	   
+	   
+	   <bean id="myMaths" class="co.edureka.MyMaths">
+	   <property name="var" value="10"/>
+	   </bean>
+	   
+	   <bean id="befAdv" class="co.edureka.BeforeAdvice"/>
+	   	   <bean id="aftAdv" class="co.edureka.AfterAdvice"/>
+	   
+	   <!-- Proxy factory bean has to be set up for using Advices and AOP to be in Action -->
+	   <bean id ="mathsproxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+	   	<property name="target" ref="myMaths"/>
+	   	
+	   </bean>
+	   
+</beans>
+	   
+

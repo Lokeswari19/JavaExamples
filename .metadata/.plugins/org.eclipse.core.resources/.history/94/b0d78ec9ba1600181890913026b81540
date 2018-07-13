@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+</head>
+<body>
+	<h3>	Welcome to Java EE</h3>
+	<br/>
+	<a href="Register.html">New User</a>
+	<br/>
+	<a href="Login.html">Existing User</a>
+	<br>
+	<a href= "">MyServlet</a>
+	</body>
+</html>
